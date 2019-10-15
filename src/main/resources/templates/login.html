@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}"/>
+</head>
+<body>
+<div class="container">
+    <div class="align-header">
+        <h2>Login:</h2>
+    </div>
+    <div class="alert alert-danger align-error" th:if="${param.error}">
+        Invalid username or password.
+    </div>
+
+    <form class="form-horizontal" th:action="@{/login}" method="post">
+        <div class="form-group">
+            <label class="control-label col-sm-2"> Username : </label>
+            <div class="col-sm-3">
+                <input type="text" name="username" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2"> Password: </label>
+            <div class="col-sm-3">
+                <input type="password" name="password" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input type="submit" class="btn btn-success" value="Log in"/></div>
+            </div>
+    </form>
+</div>
+
+<script type="text/javascript" th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+</body>
+</html>

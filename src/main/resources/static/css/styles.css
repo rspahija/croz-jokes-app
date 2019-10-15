@@ -1,0 +1,20 @@
+.align-err {
+    width: 250px;
+    margin: -10px 0 5px 195px;
+}
+.align-header {
+    margin-left: 80px;
+}
+.align-error{
+    margin-left: 195px;
+    width: 260px;
+}
+.inline{
+    display: flex;
+}
+.shift-btn{
+    margin-left: 5px;
+}
+.shift-nav {
+    margin-left: 250px;
+}
